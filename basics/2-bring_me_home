@@ -1,8 +1,2 @@
 #!/bin/bash
-
-home_directory=~    # '~' represents the user's home directory
-
-cd "$home_directory" || {
-    echo "Error: Unable to change the working directory to $home_directory."
-    exit 1
-}
+cd ~
