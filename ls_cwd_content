@@ -1,0 +1,10 @@
+total 24
+drwxr-xr-x 6 root root  142 Aug  2 10:28 .
+drwx------ 1 root root 4096 Aug  2 10:24 ..
+-rw-r--r-- 1 root root   36 Aug  2 09:52 $*\\'Best
+drwxr-xr-x 3 root root 4096 Aug  1 12:38 basics
+drwxr-xr-x 8 root root  185 Aug  2 10:26 .git
+drwxr-xr-x 2 root root  198 Aug  2 10:24 io_redirections_and_filters
+-rw-r--r-- 1 root root    0 Aug  2 10:28 ls_cwd_content
+drwxr-xr-x 2 root root 4096 Aug  2 08:26 permissions
+-rw-r--r-- 1 root root   44 Aug  1 07:43 README.md
