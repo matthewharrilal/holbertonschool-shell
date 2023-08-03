@@ -7,14 +7,19 @@ BAD_JAPAN_ITERATION=8
 BAD_ITALY_ITERATION=16
 while [ $COUNTER -le $MAX_COUNTER ];
 do
-	if [ $COUNTER -eq $BAD_CHINA_ITERATION ]; then 
-		echo "bad luck from China"
-	elif [ $COUNTER -eq $BAD_JAPAN_ITERATION ]; then
-		echo "bad luck from Japan"
-	elif [ $COUNTER -eq $BAD_ITALY_ITERATION ]; then
-                echo "bad luck from Italy"
-	else 
-		echo $COUNTER
-	fi
+	case $COUNTER in
+		$BAD_CHINA_ITERATION)
+			echo "bad luck from China"
+			;;
+		$BAD_JAPAN_ITERATION)
+			echo "bad luck from Japan"
+			;;
+		$BAD_ITALY_ITERATION)
+			echo "bad luck from Italy"
+			;;
+		*)
+			echo $COUNTER
+			;;
+		esac
 	((COUNTER++))
 done
