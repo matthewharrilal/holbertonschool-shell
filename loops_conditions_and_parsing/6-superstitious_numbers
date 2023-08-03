@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# This script is displaying Best School under a while loop and replace the ninth iterationi
+COUNTER=0
+MAX_COUNTER=20
+BAD_CHINA_ITERATION=3
+BAD_JAPAN_ITERATION=8
+BAD_ITALY_ITERATION=16
+while [ $COUNTER -le $MAX_COUNTER ];
+do
+	if [ $COUNTER -eq $BAD_CHINA_ITERATION ]; then 
+		echo "bad luck from China"
+	elif [ $COUNTER -eq $BAD_JAPAN_ITERATION ]; then
+		echo "bad luck from Japan"
+	elif [ $COUNTER -eq $BAD_ITALY_ITERATION ]; then
+                echo "bad luck from Italy"
+	else 
+		echo $COUNTER
+	fi
+	((COUNTER++))
+done
