@@ -5,7 +5,7 @@ MAX_COUNTER=9
 ITERATION_STOP=8
 while [ $COUNTER -le $MAX_COUNTER ];
 do
-	if [ $COUNTER -eq $ITERATION_STOP ] then 
+	if [ $COUNTER -eq $ITERATION_STOP ]; then 
 		echo "Hi"
 	else
 		echo "Best School"
