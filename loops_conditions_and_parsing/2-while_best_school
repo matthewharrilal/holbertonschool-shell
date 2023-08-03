@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # This script is displaying Best School under a while loop`:wq
 COUNTER=0
-MAX_COUNTER=10
+MAX_COUNTER=9
 while [ $COUNTER -le $MAX_COUNTER ];
 do
 	echo "Best School"
