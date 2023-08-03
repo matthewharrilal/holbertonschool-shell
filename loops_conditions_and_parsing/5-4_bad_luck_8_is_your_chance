@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# This script is displaying Best School under a while loop and replace the ninth iterationi
+COUNTER=0
+MAX_COUNTER=10
+BAD_LUCK_ITERATION=4
+GOOD_LUCK_ITERATION=8
+while [ $COUNTER -le $MAX_COUNTER ];
+do
+	if [ $COUNTER -eq $BAD_LUCK_ITERATION ]; then 
+		echo "bad luck"
+	elif [$COUNTER -eq $GOOD_LUCK_ITERATION ]; then
+		echo "good luck"
+	else 
+		echo "Best School"
+	fi
+	((COUNTER++))
+done
