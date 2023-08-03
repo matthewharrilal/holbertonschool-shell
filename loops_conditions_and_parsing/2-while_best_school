@@ -1,0 +1,8 @@
+#!/bin/bash
+COUNTER=0
+MAX_COUNTER=10
+while [$COUNTER -le $MAX_COUNTER];
+do
+	echo "Best School"
+	$((COUNTER++))
+done
