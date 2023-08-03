@@ -8,7 +8,7 @@ while [ $COUNTER -le $MAX_COUNTER ];
 do
 	if [ $COUNTER -eq $BAD_LUCK_ITERATION ]; then 
 		echo "bad luck"
-	elif [$COUNTER -eq $GOOD_LUCK_ITERATION ]; then
+	elif [ $COUNTER -eq $GOOD_LUCK_ITERATION ]; then
 		echo "good luck"
 	else 
 		echo "Best School"
