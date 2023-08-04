@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Script used to display directory contents split at the operator
+
+example_string="Hello"
+
+for (( i = 0; i -lt $example_string; i++ ));
+do
+	echo "${string:$i}"
+done
