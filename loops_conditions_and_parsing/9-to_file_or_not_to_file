@@ -1,4 +1,4 @@
-#!/bin/user/env bash
+#!/usr/bin/env bash
 #This script checks for the existince of a school file, empty, and if it's regular
 
 found_file=false
