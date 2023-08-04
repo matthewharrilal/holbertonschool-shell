@@ -3,7 +3,7 @@
 
 # cut -d ':' -f 1,3,6 ../../../etc/passwd
 
-cat "../../../etc/passwd" | while read line;
+cat "/etc/passwd" | while read line;
 do
 	cut -d ':' -f 1,3,6
 done
