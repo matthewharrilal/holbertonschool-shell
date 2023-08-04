@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# This script uses a delimeter to print out specific fields
+
+while IFS= read -r _;
+do
+	username=cut -d ':' -f 1
+	group_id=cut -d ':' -f 4
+	home_dir=cut -d ':' -f 6
+	command_shell=cut -d ':' -f 7
+	user_id=cut -d ':' -f 3
+	password=cut -d ':' -f 2
+	user_info=cut -d ':' -f 5
+
+	echo "The user $username is part of the $group_id gang, lives in $home_dir and rides $command_shell. $user_id's place is protected by the passcode $password, more info about the user here: $user_info"
+done < "//etc/passwd"
+
