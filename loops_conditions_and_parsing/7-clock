@@ -4,7 +4,7 @@
 current_hour=0
 current_minute=1
 max_minute=59
-max_hour=3
+max_hour=1
 
 echo "Hour: $current_hour"
 while [ $current_minute -le $max_minute ] && [ $current_hour -lt $max_hour ];
