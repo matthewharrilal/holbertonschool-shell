@@ -6,14 +6,15 @@ current_minute=1
 max_minute=59
 max_hour=12
 
+echo "Hour: $current_hour"
 while [ $current_minute -le $max_minute ] && [ $current_hour -le $max_hour ];
 do
-	echo "Hour: $current_hour"
 	echo $current_minute
 
 	if [ $current_minute -eq $max_minute ]; then
 		$current_minute=1
 		((current_hour++))
+		echo "Hour: $current_hour"
 	else 
 		((current_minute++))
 	fi
