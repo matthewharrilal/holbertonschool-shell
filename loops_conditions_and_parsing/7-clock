@@ -3,7 +3,7 @@
 
 current_hour=0
 current_minute=1
-max_minute=20
+max_minute=59
 max_hour=12
 
 echo "Hour: $current_hour"
@@ -12,7 +12,7 @@ do
 	echo "This is the current_minute: $current_minute"
 
 	if [ $current_minute -eq $max_minute ]; then
-		$current_minute=1
+		current_minute=1
 		echo "This is the minute after setting: $current_minute" 
 		((current_hour++))
 		echo "Hour: $current_hour"
