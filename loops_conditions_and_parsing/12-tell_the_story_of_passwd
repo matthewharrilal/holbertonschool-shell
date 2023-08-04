@@ -3,14 +3,12 @@
 
 while IFS= read -r line;
 do
-	username=$(cut -d ':' -f 1)
-	group_id=$(cut -d ':' -f 4)
-	home_dir=$(cut -d ':' -f 6)
-	command_shell=$(cut -d ':' -f 7)
-	user_id=$(cut -d ':' -f 3)
-	password=$(cut -d ':' -f 2)
-	user_info=$(cut -d ':' -f 5)
-	
+	username=$(cut -d ':' -f 1 <<< $line)
+	group_id=$(cut -d ':' -f 4 <<< $line)
+	home_dir=$(cut -d ':' -f 6 <<< $line)
+	command_shell=$(cut -d ':' -f 7 <<< $line)
+	user_id=$(cut -d ':' -f 3 <<< $line)
+	password=$(cut -d ':' -f 2 <<< $line)
+	user_info=$(cut -d ':' -f 5 <<< $line)
 	echo "The user $username is part of the $group_id gang, lives in $home_dir and rides $command_shell. $user_id's place is protected by the passcode $password, more info about the user here: $user_info"
 done < "//etc/passwd"
-
