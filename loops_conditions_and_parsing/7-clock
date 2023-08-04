@@ -3,7 +3,7 @@
 
 current_hour=0
 current_minute=1
-max_minute=59
+max_minute=20
 max_hour=12
 
 echo "Hour: $current_hour"
