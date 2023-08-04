@@ -9,12 +9,15 @@ while [ $COUNTER -le $MAX_COUNTER ];
 do
 	case $COUNTER in
 		$BAD_CHINA_ITERATION)
+			echo $COUNTER
 			echo "bad luck from China"
 			;;
 		$BAD_JAPAN_ITERATION)
+			echo $COUNTER
 			echo "bad luck from Japan"
 			;;
 		$BAD_ITALY_ITERATION)
+			echo $COUNTER
 			echo "bad luck from Italy"
 			;;
 		*)
