@@ -5,7 +5,7 @@ example_string="Hello"
 
 for (( i = 0; i < ${#example_string}; i++ ));
 do
-	current_character=${example_string:$i:1}"
+	current_character="${example_string:$i:1}"
 
 	if [ current_character -eq "-" ]; then
 		echo "Found special character"
