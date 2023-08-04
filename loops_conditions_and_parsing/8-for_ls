@@ -1,14 +1,26 @@
 #!/usr/bin/env bash
 # Script used to display directory contents split at the operator
 
-example_string="10-loops_for_sale"
+has_found_update=false
 
-for (( i = 0; i < ${#example_string}; i++ ));
+for file in *;
 do
-	current_character="${example_string:$i:1}"
+	for (( i = 0; i < ${#file}; i++ ));
+	do
+		current_character="${file:$i:1}"
 
-	if [ $current_character == "-" ]; then
-		position=i
-		echo "${example_string:$position}"
+		if [ $current_character == "-" ]; then
+			position=i+1
+			echo "${file:$position}"
+			has_found_update=true
+			break
+		fi
+	done
+
+	if ! $has_found_update;
+	 then
+		echo $file
 	fi
+
+	has_found_update=false
 done
