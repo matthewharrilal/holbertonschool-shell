@@ -7,12 +7,13 @@ max_minute=59
 max_hour=12
 
 echo "Hour: $current_hour"
-while [ $current_minute -le $max_minute ] && [ $current_hour -le $max_hour ];
+while [ $current_minute -le $max_minute ] && [ $current_hour -lt $max_hour ];
 do
-	echo $current_minute
+	echo "This is the current_minute: $current_minute"
 
 	if [ $current_minute -eq $max_minute ]; then
 		$current_minute=1
+		echo "This is the minute after setting: $current_minute" 
 		((current_hour++))
 		echo "Hour: $current_hour"
 	else 
