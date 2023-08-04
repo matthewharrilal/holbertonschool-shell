@@ -3,7 +3,7 @@
 
 example_string="Hello"
 
-for (( i = 0; i -lt $example_string; i++ ));
+for (( i = 0; i < ${#example_string}; i++ ));
 do
-	echo "${string:$i}"
+	echo "${example_string:$i:1}"
 done
