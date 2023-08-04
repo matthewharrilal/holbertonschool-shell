@@ -9,8 +9,8 @@ do
 	do
 		current_character="${file:$i:1}"
 
-		if [ $current_character == "-" ]; then
-			position=i+1
+		if [ "$current_character" == "-" ]; then
+			position=$((i+1))
 			echo "${file:$position}"
 			has_found_update=true
 			break
