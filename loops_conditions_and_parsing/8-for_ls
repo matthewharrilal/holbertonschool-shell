@@ -1,13 +1,14 @@
 #!/usr/bin/env bash
 # Script used to display directory contents split at the operator
 
-example_string="Hello"
+example_string="10-loops_for_sale"
 
 for (( i = 0; i < ${#example_string}; i++ ));
 do
 	current_character="${example_string:$i:1}"
 
 	if [ $current_character == "-" ]; then
-		echo "Found special character"
+		position=i
+		echo "${example_string:$position}"
 	fi
 done
