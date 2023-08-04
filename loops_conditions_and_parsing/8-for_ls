@@ -19,7 +19,7 @@ do
 
 	if ! $has_found_update;
 	 then
-		echo $file
+		echo "$file"
 	fi
 
 	has_found_update=false
