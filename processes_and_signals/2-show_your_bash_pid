@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This script includes the BASH PID
+
+ps -eo pid,command
