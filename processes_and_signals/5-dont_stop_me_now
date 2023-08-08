@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Used to kill bash proccess
+
+# According to the script name kill the process in a new window`
+script_name="4-to_infinity_and_beyond"
+process_id=$(pgrep -f "$script_name")
+
+kill $process_id
