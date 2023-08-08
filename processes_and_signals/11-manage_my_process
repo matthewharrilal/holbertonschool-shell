@@ -6,7 +6,7 @@ process_id=$(pgrep -f "$script_name")
 
 case "$1" in
 	"start")
-	   sh ./manage_my_process
+	   sh ./manage_my_process &
 	   echo $$ > //var/run/my_process.pid
 	   echo "manage_my_process started" 
 	   ;;
@@ -18,7 +18,7 @@ case "$1" in
 	"restart")
 	  kill "$process_id"
 	  rm -f //var/run/my_process.pid
-	  sh ./manage_my_process
+	  sh ./manage_my_process &
 	  echo $$ > //var/run/my_process.pid
           echo "manage_my_process restarted"
 	  ;;
