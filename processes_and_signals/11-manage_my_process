@@ -1,0 +1,29 @@
+#!/usr/bin/bash env 
+# This script manages the manage_my_process script
+
+script_name="manage_my_process"
+process_id=$(pgrep -f "$script_name")
+
+case "$1" in
+	"start")
+	   sh ./manage_my_process
+	   echo $$ > //var/run/my_process.pid
+	   echo "manage_my_process started" 
+	   ;;
+	"stop")
+	  kill "$process_id"
+	  rm -f //var/run/my_process.pid
+	  echo "manage_my_process stopped"
+	  ;;
+	"restart")
+	  kill "$process_id"
+	  rm -f //var/run/my_process.pid
+	  sh ./manage_my_process
+	  echo $$ > //var/run/my_process.pid
+          echo "manage_my_process restarted"
+	  ;;
+	*)
+	   echo "manage_my_process {start|stop|restart}"
+           ;;
+esac
+
