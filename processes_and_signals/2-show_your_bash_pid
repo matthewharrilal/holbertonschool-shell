@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # This script includes the BASH PID
-
+# shellcheck disable=SC2009
 ps -eo pid,command
