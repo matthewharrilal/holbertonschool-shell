@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This script displays bash processes w/o ps
+
+pgrep -l bash
