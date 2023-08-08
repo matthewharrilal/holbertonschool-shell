@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Script that kills process without using kill
+
+script_name="4-to_infinity_and_beyond"
+process_id=$(pgrep -f "$script_name")
+
+pkill -P $process_id
