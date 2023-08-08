@@ -3,6 +3,7 @@
 
 cleanup() {
 	echo "I am invincible!!!"
+	exit 0
 }
 
 while true;
