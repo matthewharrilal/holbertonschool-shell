@@ -1,4 +1,4 @@
-#!/usr/bin/bash env 
+#!/usr/bin/env bash 
 # This script manages the manage_my_process script
 
 script_name="manage_my_process"
